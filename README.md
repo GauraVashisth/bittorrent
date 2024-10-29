@@ -1,1 +1,1 @@
-# cohort 2.0
+# MERN stack
