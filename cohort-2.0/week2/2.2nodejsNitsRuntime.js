@@ -78,9 +78,11 @@ what is HTTP server?
     Meathod: POST
       meathod specifies what kind of request ure sending
       adding something/put some data on server - POST
-      get some data - GET
-      update something - PUT
-      deleting something - DELETE
+      retrieving data - GET
+      creating data - POST
+      update resources - PUT
+      deleting resources - DELETE
+      partial updates - PATCH
       - POSTHANDLer 
       - GETHANDLER
   //for server side:
