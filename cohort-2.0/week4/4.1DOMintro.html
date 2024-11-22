@@ -20,9 +20,87 @@
   <title>calculate-sum</title>
 </head>
 <body>
-  <input type="text" placeholder="enter the first number:">
-  <input type="text" placeholder="enter the second number">
-  <button>calculate the sum</button>
-  
+  <script>
+    function populateDiv (){
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+      const element = document.getElementById("calculation")
+      element.innerHTML = parseInt (a) + parseInt(b);
+      // gllbal functioin to convert string into number, "123" => 123.
+    }
+  </script>
+  <input id="firstNumber" type="text" placeholder="enter the first number:"><br>
+  <input id="secondNumber" type="text" placeholder="enter the second number"><br> <br>
+  <button onclick="populateDiv()">Calculate Sum</button>
+  <div id="calculation"></div>
 </body>
 </html>
+<!--
+ but making them dynamic is hard;
+ dynamimc - * changing the elements of websites once the website is loaded.  
+            * calculating the sum based on inputs and rendering it on the screen. 
+-->
+
+<!-- // classes and id -->
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    .blackBox {
+      background-color: red;
+      font-size: 100;
+      padding: 20;
+      margin: 100;
+      color: white;
+    }
+    #whiteBox { 
+      background-color: orange;
+      font-size: 100;
+      padding: 20;
+      margin: 100;
+      color: black; 
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <br> 
+  <div class="blackBox">
+    xyxye
+  </div>
+  <div class="blackBox">
+    zhazbjb
+  </div>
+  <div id="whiteBox">
+    vjnvjn
+  </div>
+</body>
+</html>
+<!-- 
+Ids are supposed to be unique. simmilar to how u attach a class to a specific 
+ div/ span/ . nutton/.., u can also attavh ids.
+ Ids are used to identify a div/ span/ input/button.
+ 
+ with class, u can attach same class to multiple elements whereas,
+ with id u generally avoid attaching the same id to multiple elements. 
+ 
+ why are Ids useful?
+ classes let u get rid of code repetition, what do Ids do?
+  they let u access elements via the DOM API.
+  Ids can be used in CSS, but usually used for Js.
+-->
+
+<!-- 
+now, lets say u dont want to access to the calculation logoc on the frontend.
+lets assumke its a hard problem that someone has exposed on a backend server,
+and u need to hit the backend servrer and get back the value. 
+
+                   -- give me sum of 100, 200 ->
+  browsewr code                                 backend
+                           <- 300 --
+
+// backebnd server: https://sum-server.100xdevs.com/sum?a=1&b=2
+
+-->
