@@ -25,8 +25,10 @@
       const a = document.getElementById("firstNumber").value;
       const b = document.getElementById("secondNumber").value;
       const element = document.getElementById("calculation")
-      element.innerHTML = parseInt (a) + parseInt(b);
-      // gllbal functioin to convert string into number, "123" => 123.
+      // to send request to BE: fetch (function to which given some input, it gives back a response)
+      // element.innerHTML = parseInt (a) + parseInt(b);
+        // not allowed to do this, have to hit the be server, get back response; after getting response put in :37"calculation"
+      // parseInt: gllbal functioin to convert string into number, "123" => 123.
     }
   </script>
   <input id="firstNumber" type="text" placeholder="enter the first number:"><br>
