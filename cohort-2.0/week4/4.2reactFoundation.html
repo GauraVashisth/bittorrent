@@ -1,0 +1,58 @@
+<!-- DOM manipulation is v. hard to write as a developer.
+making dynamic websitess, with the primitves tha DOM provides u is v. hard. -->
+
+<!-- to create a todo application usng Dom manipulation:
+  document.createElement
+  document.appendChild
+  element.setAttribute
+  element.childen
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function addTodo() {
+      const title = document.getElementById("title").value;
+      const deescription= document.getElementById("descript").value;
+      console.log(title)
+      console.log(deescription)
+
+      /*by using this meathod, it overwrite the things.
+      document.getElementById("container").innerHTML= `
+      <div>${title}</div>
+      <div>${deescription}</div>
+      <button> mark as done</button>
+      `
+      */
+
+      /*ugly wa to solve overwriting issue, writing strings and shove them directly inside ur html.
+      const originalHTML= document.getElementById("container").innerHTML;
+      document.getElementById("container").innerHTML= originalHTML + `
+      <div>${title}</div>
+      <div>${deescription}</div>
+      <button> mark as done</button>
+      `
+      */
+
+      //better way by using: document.createElement
+      const outerDiv= document.createElement("div");
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <input id="title" type="text" placeholder="title">
+    <br>
+    <input id="descript" type="text" placeholder="description"> 
+    <br>
+    <button onclick="addTodo()">add todo</button>
+  </div>
+  <div id="container">
+
+  </div>
+</body>
+</html>
